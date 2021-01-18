@@ -20,11 +20,7 @@ app.use(bodyparser.urlencoded({limit:'50mb',extended:true}));
 app.use('/passed',passedRoute)
 app.use('/employees',employeeRoute)
 //app.use(middle);
-app.get('/',(req,res)=>{
-    res.redirect('/employees');
 
-  
-})
 
 if(process.env.NODE_ENV=='production'){
     app.use(express.static('client/build'));
